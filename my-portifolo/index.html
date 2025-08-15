@@ -1,33 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
     <title>My Personal Website</title>
 </head>
+
 <body>
     <header>
-         <h3 class="logo">Becky</h3>
-         <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About </a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contacts</a></li>
-         </nav>
-    </header>
-    <main>
-        <img src="" alt="My picture">
-        <h3>Hello am'</h3>
-        <h1>REBECCA KIRABO</h1>
-        <h2>Frontend Developer</h2>
-        <p></p>
-
-        <div>
-
+        <div class="navContainer">
+            <nav class="navbar">
+                <h3 class="logo">Becky</h3>
+                <ul class="nav-links">
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#about">About </a></li>
+                    <li><a href="#education">Projects</a></li>
+                    <li><a href="#projects">Contacts</a></li>
+            </nav>
         </div>
-    </main>
-    
-    
+    </header>
+
+    <main>
+        <div class="introContainer">
+            <section class="intro" id="intro">
+                <img src="../images/becky.jpg" alt="My picture" width="500px">
+                <h3>Hello am'</h3>
+                <h1>REBECCA KIRABO</h1>
+                <h2>Frontend Developer</h2>
+                <p>I am a student at Refactory Academy studying Software Engineering. I am really
+                    passionate about Web Development and I am currently focused on Frontend technologies.
+                    I am working on becoming a Full Stack Developer in order to build
+                    Websites that are helpful to everyone including the disabled.
+                </p>
+                <i class="fa-brands fa-linkedin fa-beat"></i>
+                <i class="fa-brands fa-whatsapp fa-beat"></i>
+                <i class="fa-brands fa-youtube fa-beat"></i>
+                <i class="fa-brands fa-tiktok fa-beat"></i>
+            </section>
+        </div>
+
+        <div class="aboutContainer">
+            <section class="about" id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am Becky, an aspiring software engineer driven by curiosity, creativity, and a love for
+                    problem-solving. My journey
+                    into tech began with a simple fascination for how websites and apps are built, which quickly grew
+                    into a hands-on
+                    passion for coding and creating digital solutions.
+
+                    I specialize in front-end development, focusing on building clean, responsive, and user-friendly
+                    interfaces. I enjoy the
+                    challenge of transforming complex requirements into elegant designs that not only look great but
+                    also function
+                    seamlessly. My approach combines creativity with precision — because I believe great software is as
+                    much about the
+                    experience as it is about the code.
+
+                    Beyond the technical side, I am a fast learner who thrives in collaborative environments and adapts
+                    quickly to new tools
+                    and technologies. Whether it is experimenting with modern JavaScript frameworks, fine-tuning user
+                    interactions, or
+                    solving tricky bugs, I see every project as an opportunity to grow my skills and make a meaningful
+                    impact.
+
+                    When I am not coding, you will find me exploring design trends, reading about emerging technologies,
+                    or
+                    working on personal
+                    projects that push my creativity and technical limits. My ultimate goal is to contribute to
+                    innovative solutions that
+                    improve lives, and to keep evolving into a software engineer who blends technical expertise with
+                    human-centered design.
+                </p>
+            </section>
+        </div>
+        <div class="educationContainer">
+            <section class="schools" id="education">
+                <h1>Education</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="school">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Refactory Academy</h5>
+                                <p class="card-text">Certificate of Software Engineering with JavaScript</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="school">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Groundbreaker Talents</h5>
+                                <p class="card-text">Certificate of Software Engineering</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="school">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Old Kampala Senior Secondary School</h5>
+                                <p class="card-text">Advanced Certificate of Education</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="projectsContainer">
+            <h1>Projects</h1>
+            <section class="work" id="projects">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="project">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Mayondo Wood & Furniture <br>Ltd Management System</h5>
+                                <p class="card-text"> </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project">
+                            <div class="card-body">
+
+                                <h5 class="card-title">VogueValt Fashion <br>Website</h5>
+                                <p class="card-text"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="project">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Weather Forecast <br>Application</h5>
+                                <p class="card-text"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="contactsContainer">
+            <section class="contacts" id="contact">
+
+                <h2>Reach Out to Me!</h2>
+
+                <form id="contactMe">
+                    <label for="name">Name<input type="text"></label>
+                    <br><br>
+                    <label for="country">Country<input type="text"></label>
+                    <br><br>
+                    <label for="email">Email<input type="email"></label>
+                    <br><br>
+                    <label for="number">Telephone<input type="number"></label>
+                    <br><br>
+                    <label for="comment">Comment Here!<input type="text"></label>
+                    <br><br>
+                    <button type="submit" id="emailMe">Submit</button>
+                </form>
+            </section>
+        </div>
+
 </body>
+
 </html>
