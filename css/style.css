@@ -49,8 +49,17 @@ nav {
     background: white;
 }
 
+.fa-linkedin,
+.fa-github,
+.fa-youtube,
+.fa-tiktok {
+    width: 50px;
+    height: 50px;
+}
+
 #intro {
-    display: flex
+    display: flex;
+    text-align: center;
 }
 
 #about {
