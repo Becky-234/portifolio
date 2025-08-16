@@ -57,8 +57,30 @@ nav {
 .fa-github,
 .fa-youtube,
 .fa-tiktok {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+}
+
+.icon {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.fa-linkedin  {
+    color: blue;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-tiktok {
+    color: black;
+}
+
+.fa-youtube {
+    color: red;
 }
 
 #intro {
