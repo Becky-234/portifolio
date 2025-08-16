@@ -7,6 +7,7 @@
 
 main {
  margin: 20px;
+ margin-top: 50px;
 }
 
 h1 {
@@ -19,14 +20,18 @@ h1 {
     color: #88BBDC;
 }
 
-nav {
-    background: #072F47;
+header {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
-    padding: 10px;
+    padding-top: 10px;
     z-index: 1000;
+    margin-top: -60px;
+
+}
+
+nav {
+    background: #072F47;
 }
 
 .nav-links {
