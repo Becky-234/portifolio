@@ -2,11 +2,11 @@
     margin: auto 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    
 }
 
 main {
  margin: 20px;
+ background: linear-gradient toright(#FFCCF2, #977DFF, #0033FF);
 }
 
 h1 {
@@ -25,12 +25,12 @@ header {
     right: 0;
     padding-top: 10px;
     z-index: 1000;
-    margin-top: -30px;
-
+    margin-top: -110px;
 }
 
 nav {
     background: #072F47;
+    padding: 15px;
 }
 
 .nav-links {
@@ -64,11 +64,11 @@ nav {
 
 .icon {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .fa-linkedin  {
-    color: blue;
+    color: rgb(79, 79, 210);
 }
 
 .fa-github {
@@ -86,21 +86,52 @@ nav {
 #intro {
     display: flex;
     text-align: center;
+    background: #005573;
+    color: white;
+    border: 1px solid;
+    margin-top: 100px;
+    border-radius: 30px;
 }
 
 #about {
     display: flex;
+    background: #005573;
+    color: white;
+    border: 1px solid;
+    border-radius: 30px;
+}
+
+#education {
+    background: #005573;
+    color: white;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+#learnt {
+    background: #005573;
+    color: white;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+#contact {
+    background: #005573;
+    color: white;
+    border: 1px solid;
+    border-radius: 20px;
 }
 
 .school {
-    border: solid 1px grey;
+    border: 1px;
     width: 300px;
     height: 150px;
     display: flex;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 5px 10px darkgray;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
     background: lightblue;
+    margin: 0 0 35px 35px;
 }
 
 .card {
@@ -108,9 +139,20 @@ nav {
     height: 150px;
     padding: 20px;
     border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
 .know {
+    display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     flex: 1;
@@ -120,20 +162,83 @@ nav {
 }
 
 .project {
-    border: 1px solid grey;
+    border: 1px ;
     width: 300px;
     height: 200px;
     display: flex;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 5px 10px darkgray;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
     background: lightblue;
+    margin: 0 0 35px 35px;
 }
 
 .formContainer {
-    border: 1px solid black;
-    margin: auto;
+    background-color: #b3dcee;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    padding: 20px 25px;
     width: 400px;
-    padding: 40px 40px;
-    background: lightblue;
+    margin: 50px auto;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label {
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: #005573;
+    font-weight: 600;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer input[type="tel"],
+.formContainer textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #bbe4ed;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f8fcfd;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.formContainer input:focus,
+.formContainer textarea:focus {
+    border-color: #3399cc;
+    outline: none;
+    background: #eef7fa;
+}
+
+.formContainer input[type="submit"] {
+    background: linear-gradient(90deg, #3399cc 0%, #51b7ed 100%);
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 3px 16px rgba(51, 153, 204, 0.12);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.formContainer input[type="submit"]:hover {
+    background: linear-gradient(90deg, #51b7ed 0%, #3399cc 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(51, 153, 204, 0.16);
+}
+
+.formContainer input[type="submit"]:active {
+    background-color: #005573;
+    transform: scale(0.98);
+    box-shadow: 0 1px 6px rgba(51, 153, 204, 0.10);
 }
