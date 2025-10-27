@@ -14,13 +14,14 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="navContainer">
             <nav class="navbar">
-                <a href="#intro"><h3 class="logo">Becky</h3></a>
+                <a href="#intro">
+                    <h3 class="logo">Becky</h3>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#about">About </a></li>
-                    <!-- <li><a href="#education">Education</a></li> -->
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -28,6 +29,29 @@
             </nav>
         </div>
         <br><br><br>
+    </header> -->
+
+    <header>
+        <div class="navContainer">
+            <nav class="navbar">
+                <a href="#intro">
+                    <h3 class="logo">Becky</h3>
+                </a>
+    
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+    
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -236,7 +260,7 @@
         </section>
         <br><br><br>
 
-        <div class="contactsContainer">
+        <!-- <div class="contactsContainer">
             <section class="contacts" id="contact">
                 <h1>Reach Out to Me!</h1>
                 <br><br>
@@ -252,8 +276,50 @@
                     </form>
                 </div>
             </section>
+        </div> -->
+
+        <div class="contactsContainer">
+            <section class="contacts" id="contact">
+                <h1 style="color: #fff;">Get In Touch</h1>
+                <p style="color: #fff; margin-bottom: 30px; font-size: 1.1rem;">
+                    Have a project in mind or want to collaborate? I'd love to hear from you.
+                </p>
+
+                <div class="formContainer">
+                    <form id="contactMe" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <div class="error-message" id="name-error">Please enter your name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            <div class="error-message" id="email-error">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Your Message</label>
+                            <textarea id="comment" name="comment" placeholder="Tell me about your project or inquiry..."
+                                required></textarea>
+                            <div class="error-message" id="comment-error">Please enter your message</div>
+                        </div>
+
+                        <button type="submit" id="emailMe" class="sendMessage">
+                            <span id="button-text">Send Message</span>
+                            <span id="button-loading" style="display: none;">Sending...</span>
+                        </button>
+
+                        <div class="success-message" id="success-message">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
 
 </body>
+
 
 </html>
