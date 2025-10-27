@@ -80,3 +80,49 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize active link
     updateActiveNavLink();
 });
+
+
+// ABOUT ME SECTION
+// Add scroll-triggered animations
+document.addEventListener('DOMContentLoaded', function () {
+    const introSection = document.querySelector('.introContainer');
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.3 });
+
+    // Observe animated elements
+    const animatedElements = document.querySelectorAll('.head h3, .head h1, .head .major, .head p, .social-links, .cta-button');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Add typing effect for the headline (optional)
+    const headline = document.querySelector('.head h1');
+    const originalText = headline.textContent;
+    headline.textContent = '';
+
+    let i = 0;
+    function typeWriter() {
+        if (i < originalText.length) {
+            headline.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    // Start typing effect when section is in view
+    const headlineObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            typeWriter();
+            headlineObserver.unobserve(headline);
+        }
+    });
+
+    headlineObserver.observe(headline);
+});
