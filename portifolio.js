@@ -126,3 +126,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headlineObserver.observe(headline);
 });
+
+
+// SECOND ABOUT ME SECTION
+// About section animations and interactions
+document.addEventListener('DOMContentLoaded', function () {
+    // Animate stats counter
+    const statNumbers = document.querySelectorAll('.stat-number');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateValue(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(stat => observer.observe(stat));
+
+    function animateValue(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                element.textContent = target + '+';
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+
+    // Add scroll-triggered animations
+    const aboutElements = document.querySelectorAll('.about p, .about img, .skills-preview');
+
+    const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.2 });
+
+    aboutElements.forEach(el => {
+        aboutObserver.observe(el);
+    });
+
+    // Parallax effect for the about image
+    window.addEventListener('scroll', function () {
+        const aboutImage = document.querySelector('.about-image');
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.1;
+
+        if (aboutImage && window.innerWidth > 768) {
+            aboutImage.style.transform = `translateY(${rate}px) scale(1.02)`;
+        }
+    });
+});
